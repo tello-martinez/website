@@ -1,42 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tello Martinez</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header>
-        <h1>TM</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-    <section class="Home">
-        <div class="content-box">
-            <div class="icon-box">
-                <a href="https://www.linkedin.com/in/tellomartinez/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="mailto:tellomartinez@outlook.com"><i class='bx bx-mail-send'></i></a>
-                <a href="https://github.com/tello-martinez" target="_blank"><i class='bx bxl-github'></i></a>
-            </div>
-            <div class="text-box">
-                <h1>
-                    <span class="skills">Hello World</span>
-                </h1>
-                <h1>I'm Tello Martinez</h1>
-                <p>Welcome to my corner of the web. I'm building this site to be a portfolio and knowledge hub. I'm striving to blend my analytical side with my creative side.</p>
-                <a href="./Tello-Martinez-Resume.pdf" download="Tello-Martinez-Resume.pdf" button type="button" class="btn">Download CV</button></a>
-            </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!---Desktop Navigation Bar-->
+    <nav id="desktop-nav">
+      <div class="logo">My Site</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+         <!--- <li><a href="#projects">Projects</a></li>-->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+        <!---Mobile Menu Icon-->
+    <nav id="hamburger-nav">
+      <div class="logo">My Site</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <img src="./self.png" class="img" alt="">
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+         <!--- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>-->
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile-hero">
+      <!---<div class="section__pic-container">
+        <img src="./assets/self.png" alt="Tello Martinez profile picture" />
+      </div>--->
+      <div class="section__text">
+        <!---<p class="section__text__p1">Hello, I'm</p>--->
+        <h1 class="title">Tello Martinez</h1>
+        <!---<p class="section__text__p2">Data Analyst</p>--->
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Tello-Martinez-Resume.pdf')"
+          >View My CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact
+          </button>
+        </div>
+        <!---<div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/tellomartinez', '_blank')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https://github.com/tello-martinez', '_blank')"
+          /> 
+        </div>-->
+      </div>
     </section>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <section id="about">
+     <!---<p class="section__text__p1">Get To Know More</p>-->
+      <div class="section-container">
+        <h1 class="title">About Me</h1>
+        <div class="section__pic-container">
+          <img
+            src="./assets/self.png" alt="Tello Martinez profile picture"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="text-container">
+          <p>
+            Hello World! <br/>Welcome to my corner of the web.<br/>
+            I truly enjoy being creative with data.
+          </p>
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/certificate.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Background</h3>
+              <p>Data Analyst</p>
+              <p>Data Acquistion <br/>
+                 Implementation
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/mortarboard.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Finance<br />B.Sc. Bachelors Degree</p>
+            </div>
+          </div>
+         <!--- <div class="text-container">
+            <p>
+              Hello World! Welcome to my corner of the web.<br />
+              See how I blend my data obssesion with my creativity.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />-->
+    </section>
+    <section id="experience">
+      <!---<p class="section__text__p1">Explore My</p>--->
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/excel.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Excel</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/sql-server.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/python.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/aws-dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AWS</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/powerbi.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Power BI</h3>
+                </div>
+              </article>
+             <!--- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Command Line</h3>
+                </div>
+              </article> -->
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Communication</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/salesforce.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Salesforce</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/zendesk.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Zendesk</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/email 2.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Outlook</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/jira.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Jira</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/slack.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Slack</h3>
+                </div>
+              </article>
+              <!---<article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Obsidian</h3>
+                </div>
+              </article>--->
+            </div>
+          </div>
+        </div>
+      <!---</div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />--->
+   <!---  </section>
+   <section id="projects">-->
+      <!---<p class="section__text__p1">Browse My Recent</p>--->
+      <!--- <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section> --->
+    <section id="contact">
+      <!---<p class="section__text__p1">Get in Touch</p>--->
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">info@tellomartinez.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/tellomartinez/" target="_blank">Tello Martinez</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <!---<li><a href="#projects">Projects</a></li>--->
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="credits-container">
+      <p>Made with &#128420;</p>
+      <p>&#169; 2024 All Rights Reserved</p>
+      <p><a href="#">Jump To Top</a></p>
+      </div>
+    </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
